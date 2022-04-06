@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'contacts.apps.ContactsConfig',
     'accounts.apps.AccountsConfig',
     'listings.apps.ListingsConfig',
     'pages.apps.PagesConfig',
@@ -139,8 +140,14 @@ MEDIA_URL = '/media/'
 
 # Messages
 from django.contrib.messages import constants as messages
-MASSAGE_TAGS = {
+MESSAGE_TAGS = {
     messages.ERROR: 'danger',
-    
 }
+
+# Email config
+EMAIL_HOST = 'exampleHost@example.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='example_email@example.com'
+EMAIL_HOST_PASSWORD='example'
+EMAIL_USE_TLS=True
 
